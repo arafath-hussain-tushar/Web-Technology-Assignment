@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .container{
+      width: 450px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ccc;
+    }
+    h2{
+      text-align: center;
+    }
+    label{
+      display: block;
+      margin-top: 12px;
+    }
+    fieldset{
+      margin-top: 15px;
+    }
+    fieldset label{
+      display: inline;
+      margin-right: 10px;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=date],
+    input[type=tel],
+    select,
+    textarea{
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    .buttons{
+      margin-top: 20px;
+      text-align: center;
+    }
+    input[type=submit],
+    input[type=reset]{
+      padding: 10px 25px;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    input[type=submit]{
+      background-color: #4CAF50;
+    }
+    input[type=reset]{
+      background-color: #777;
+    }
+    p{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Registration</h2>
+
+    <form action="pore_implement_korbo.py" method="post">
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" minlength="6" required>
+
+      <fieldset>
+        <legend>Gender:</legend>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Favourite Sports:</legend>
+        <input type="checkbox" id="cricket" name="favourite_sports" value="cricket">
+        <label for="cricket">Cricket</label>
+        <input type="checkbox" id="football" name="favourite_sports" value="football">
+        <label for="football">Football</label>
+        <input type="checkbox" id="tennis" name="favourite_sports" value="tennis">
+        <label for="tennis">Tennis</label>
+        <input type="checkbox" id="badminton" name="favourite_sports" value="badminton">
+        <label for="badminton">Badminton</label>
+      </fieldset>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">-- Select Country --</option>
+        <option value="bangladesh">Bangladesh</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" cols="30"></textarea>
+
+      <br><br>
+      <input type="checkbox" id="terms" name="terms" value="agreed" required>
+      <label for="terms" style="display:inline;">I agree to the Terms and Conditions</label>
+
+      <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+</body>
+</html>
